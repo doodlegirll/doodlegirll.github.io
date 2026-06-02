@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Doodlegirll | Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta property="og:title" content="Doodlegirll Portfolio">
+  <meta property="og:description" content="Digital Artist • Anime • Fantasy • Character Design">
+  <meta property="og:image" content="BELLA/474472568_1824517584961967_4960602636911011603_n.jpg">
+  <meta property="og:type" content="website">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="BELLA/474472568_1824517584961967_4960602636911011603_n.jpg"
+  >
 
   <style>
+
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
     }
 
     body{
@@ -27,18 +41,28 @@
       color:white;
     }
 
+    img{
+      display:block;
+      width:100%;
+    }
+
     .hero{
       min-height:100vh;
       display:flex;
       align-items:center;
       justify-content:center;
+      text-align:center;
       padding:60px 20px;
+
       background:
-      linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)),
+      linear-gradient(
+        rgba(0,0,0,.72),
+        rgba(0,0,0,.82)
+      ),
       url("BELLA/igviewer_media_3884733108964916734.jpg");
+
       background-size:cover;
       background-position:center;
-      text-align:center;
     }
 
     .hero-content{
@@ -46,105 +70,69 @@
     }
 
     .pfp{
-      width:160px;
-      height:160px;
+      width:170px;
+      height:170px;
       border-radius:50%;
-      border:5px solid #8f5cff;
       object-fit:cover;
-      margin-bottom:25px;
-      box-shadow:0 0 30px rgba(143,92,255,.6);
+      margin:auto;
+      margin-bottom:30px;
+
+      border:5px solid #8f5cff;
+
+      box-shadow:
+      0 0 25px rgba(143,92,255,.55);
     }
 
     h1{
       font-size:4rem;
-      margin-bottom:10px;
-      letter-spacing:2px;
+      margin-bottom:12px;
+      letter-spacing:3px;
     }
 
     .subtitle{
-      color:#bcbcbc;
+      color:#bdbdbd;
       font-size:1.2rem;
-      margin-bottom:25px;
+      margin-bottom:30px;
     }
 
     .bio{
-      line-height:1.8;
-      max-width:700px;
+      max-width:720px;
       margin:auto;
-      color:#d5d5d5;
+      line-height:1.9;
+      color:#d3d3d3;
       margin-bottom:40px;
     }
 
     .buttons{
       display:flex;
-      gap:20px;
       justify-content:center;
+      gap:20px;
       flex-wrap:wrap;
     }
 
     .btn{
-      padding:14px 30px;
-      border-radius:10px;
       background:#8f5cff;
-      transition:.3s;
+      padding:15px 32px;
+      border-radius:12px;
       font-weight:bold;
+      transition:.3s;
     }
 
     .btn:hover{
-      background:#6f3fff;
-      transform:translateY(-3px);
+      transform:translateY(-4px);
+      background:#7442ff;
     }
 
     .section{
-      padding:100px 40px;
-      max-width:1400px;
+      max-width:1450px;
       margin:auto;
+      padding:100px 40px;
     }
 
     .section-title{
-      font-size:2.5rem;
-      margin-bottom:50px;
       text-align:center;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
-    }
-
-    .card{
-      background:#181820;
-      border-radius:18px;
-      overflow:hidden;
-      transition:.35s;
-      border:1px solid rgba(255,255,255,.05);
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 10px 30px rgba(0,0,0,.5);
-    }
-
-    .card img{
-      width:100%;
-      height:350px;
-      object-fit:cover;
-      display:block;
-    }
-
-    .card-content{
-      padding:20px;
-    }
-
-    .card-title{
-      font-size:1.2rem;
-      margin-bottom:10px;
-    }
-
-    .card-text{
-      color:#b8b8b8;
-      line-height:1.6;
+      font-size:2.6rem;
+      margin-bottom:60px;
     }
 
     .about{
@@ -155,14 +143,65 @@
     }
 
     .about img{
-      width:100%;
-      border-radius:20px;
+      border-radius:22px;
     }
 
     .about-text{
-      color:#d2d2d2;
       line-height:1.9;
+      color:#d0d0d0;
       font-size:1.05rem;
+    }
+
+    .about-text ul{
+      margin-top:20px;
+      padding-left:20px;
+    }
+
+    .about-text li{
+      margin-bottom:10px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:
+      repeat(auto-fit, minmax(280px,1fr));
+
+      gap:25px;
+    }
+
+    .card{
+      background:#181820;
+      border-radius:18px;
+      overflow:hidden;
+
+      transition:.35s;
+
+      border:
+      1px solid rgba(255,255,255,.05);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+
+      box-shadow:
+      0 12px 35px rgba(0,0,0,.45);
+    }
+
+    .card img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:16px 20px;
+    }
+
+    .card-title{
+      text-align:center;
+      font-size:1rem;
+      letter-spacing:1px;
+      color:#ececec;
     }
 
     .contact{
@@ -176,16 +215,17 @@
     }
 
     footer{
-      padding:30px;
       text-align:center;
+      padding:30px;
       color:#888;
-      border-top:1px solid rgba(255,255,255,.05);
+      border-top:
+      1px solid rgba(255,255,255,.05);
     }
 
     @media(max-width:900px){
 
       h1{
-        font-size:2.7rem;
+        font-size:2.8rem;
       }
 
       .about{
@@ -193,10 +233,11 @@
       }
 
       .section{
-        padding:70px 20px;
+        padding:80px 20px;
       }
 
     }
+
   </style>
 </head>
 
@@ -209,22 +250,23 @@
       <img
         class="pfp"
         src="BELLA/474472568_1824517584961967_4960602636911011603_n.jpg"
-        alt="Doodlegirll Profile Picture"
+        alt="Profile Picture"
       >
 
       <h1>DOODLEGIRLL</h1>
 
       <p class="subtitle">
-        Digital Artist • Character Designer • Fan Art • Fantasy Illustration
+        Digital Artist • Character Design • Fantasy • Anime
       </p>
 
       <p class="bio">
-        Hi, I’m Doodle. I create digital illustrations inspired by anime,
-        fantasy worlds, games, original characters, and stylized storytelling.
-        Available for commissions, overlays, VTuber assets, and custom artwork.
+        Digital artist focused on stylized characters,
+        anime-inspired illustration, fantasy artwork,
+        fan art, and original character design.
       </p>
 
       <div class="buttons">
+
         <a
           class="btn"
           href="https://www.instagram.com/doodlegirll._/"
@@ -239,44 +281,39 @@
         >
           View Gallery
         </a>
+
       </div>
 
     </div>
 
   </section>
 
-  <section class="section about-section">
+  <section class="section">
 
-    <h2 class="section-title">About The Artist</h2>
+    <h2 class="section-title">
+      About
+    </h2>
 
     <div class="about">
 
       <img
         src="BELLA/igviewer_media_3884733108964916734.jpg"
-        alt="Featured Artwork"
+        alt="Artwork"
       >
 
       <div class="about-text">
 
         <p>
-          My artwork blends anime aesthetics, fantasy themes,
-          dramatic lighting, and expressive character design.
+          A portfolio of digital illustrations inspired by anime,
+          games, fantasy worlds, stylized storytelling,
+          and expressive character design.
         </p>
-
-        <br>
-
-        <p>
-          I enjoy creating:
-        </p>
-
-        <br>
 
         <ul>
           <li>Original Characters</li>
-          <li>Fantasy Warriors</li>
+          <li>Fantasy Illustration</li>
           <li>Anime Fan Art</li>
-          <li>VTuber Assets</li>
-          <li>Twitch Overlays</li>
+          <li>Character Concepts</li>
           <li>Stylized Portraits</li>
           <li>Game Inspired Artwork</li>
         </ul>
@@ -287,69 +324,77 @@
 
   </section>
 
-  <section class="section" id="gallery">
+  <section
+    class="section"
+    id="gallery"
+  >
 
-    <h2 class="section-title">Featured Artwork</h2>
+    <h2 class="section-title">
+      Gallery
+    </h2>
 
     <div class="gallery">
 
       <div class="card">
         <img src="BELLA/igviewer_media_3884733108964916734.jpg">
         <div class="card-content">
-          <div class="card-title">Fantasy Warrior</div>
-          <div class="card-text">
-            Dark fantasy character illustration with dramatic armor design.
-          </div>
+          <div class="card-title">Artwork I</div>
         </div>
       </div>
 
       <div class="card">
         <img src="BELLA/igviewer_media_3837819654870174485.jpg">
         <div class="card-content">
-          <div class="card-title">Anime Villain</div>
-          <div class="card-text">
-            Stylized action scene inspired by anime combat aesthetics.
-          </div>
+          <div class="card-title">Artwork II</div>
         </div>
       </div>
 
       <div class="card">
         <img src="BELLA/igviewer_media_3654466687192793094.jpg">
         <div class="card-content">
-          <div class="card-title">Cyber Skeleton</div>
-          <div class="card-text">
-            Neon-inspired character design with futuristic streetwear styling.
-          </div>
+          <div class="card-title">Artwork III</div>
         </div>
       </div>
 
       <div class="card">
         <img src="BELLA/igviewer_media_3835581788165051774.jpg">
         <div class="card-content">
-          <div class="card-title">Sword Maiden</div>
-          <div class="card-text">
-            Anime-inspired fantasy scene with cinematic fire composition.
-          </div>
+          <div class="card-title">Artwork IV</div>
         </div>
       </div>
 
       <div class="card">
         <img src="BELLA/igviewer_media_3713098608666216854.jpg">
         <div class="card-content">
-          <div class="card-title">Character Design</div>
-          <div class="card-text">
-            Casual anime-inspired original character render.
-          </div>
+          <div class="card-title">Artwork V</div>
         </div>
       </div>
 
       <div class="card">
         <img src="BELLA/igviewer_media_3576145824740212555.jpg">
         <div class="card-content">
-          <div class="card-title">Fantasy Angel</div>
-          <div class="card-text">
-            Ornate armor design with celestial fantasy influence.
-          </div>
+          <div class="card-title">Artwork VI</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="BELLA/igviewer_media_3654469031003439757.jpg">
+        <div class="card-content">
+          <div class="card-title">Artwork VII</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="BELLA/igviewer_media_3631207054554841604.jpg">
+        <div class="card-content">
+          <div class="card-title">Artwork VIII</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="BELLA/igviewer_media_3575281114043463907.jpg">
+        <div class="card-content">
+          <div class="card-title">Artwork IX</div>
         </div>
       </div>
 
@@ -359,10 +404,13 @@
 
   <section class="section contact">
 
-    <h2 class="section-title">Commissions</h2>
+    <h2 class="section-title">
+      Commissions
+    </h2>
 
     <p>
-      Interested in custom artwork, overlays, or commissions?
+      For commissions, collaborations,
+      or custom artwork inquiries.
     </p>
 
     <a
@@ -370,13 +418,13 @@
       href="https://www.instagram.com/doodlegirll._/"
       target="_blank"
     >
-      Contact on Instagram
+      Contact
     </a>
 
   </section>
 
   <footer>
-    © 2026 Doodlegirll Portfolio
+    © 2026 Doodlegirll
   </footer>
 
 </body>
